@@ -21,7 +21,7 @@ class MyDocument extends Document {
         <Head />
         <body>
           <h1>
-            This is goint to be sent in every request{" "}
+            This is going to be sent in every request{" "}
             {this.props.__NEXT_DATA__.page}
           </h1>
           <div id="never">Great adventure</div>
