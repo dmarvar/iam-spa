@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         }}
       >
         <h1>Signin Page Passeport</h1>
+        <Link href="/signin/profile"> Send </Link>
         <h3>The user has to confirm the password</h3>
         <button onClick={() => alert("The information has been sent")}>
           Send new password
@@ -30,5 +32,11 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
 
 export default Home;
